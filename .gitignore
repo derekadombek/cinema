@@ -1,0 +1,37 @@
+# Build
+**/[Bb]in/
+**/[Oo]bj/
+**/[Pp]roperties/
+**/test/coverage/**
+**/nuget
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.[Cc]ache
+*.[Cc]overage
+
+# Python
+*.pyc
+
+# Java
+target/
+work/
+.classpath
+.project
+.settings
+.factorypath
+*.log
+*.lock
+*.tgz
+*.jwk
+
+# Sonarqube
+**/.sonarqube/
+
+# MacOS Cruft
+.DS_Store
+
+# Deployoment
+*.agekey
