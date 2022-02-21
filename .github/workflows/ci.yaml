@@ -1,0 +1,13 @@
+name: Cinema CI
+
+on:
+  push
+
+env:
+  IS_MASTER: ${{ github.ref == 'refs/heads/master' }}
+
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hello"
