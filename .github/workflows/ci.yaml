@@ -19,9 +19,9 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 5.0.*
-          source-url: https://nuget.pkg.github.com/derekadombek/index.json
+          source-url: https://nuget.pkg.github.com/derekdombek/index.json
         env:
-          NUGET_AUTH_TOKEN: ${{ secrets.NUGET_TOKEN }}
+          NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build
         run: |
