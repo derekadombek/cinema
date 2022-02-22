@@ -7,7 +7,7 @@ env:
   IS_MASTER: ${{ github.ref == 'refs/heads/master' }}
 
 jobs:
-  Explore-GitHub-Actions:
+  Init:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -22,3 +22,8 @@ jobs:
           source-url: https://nuget.pkg.github.com/derekdombek/index.json
         env:
           NUGET_AUTH_TOKEN: ${{ secrets.NUGET_TOKEN }}
+
+      - name: Build
+        run: |
+          dotnet restore ./client/
+          dotnet build ./CinemaApi
