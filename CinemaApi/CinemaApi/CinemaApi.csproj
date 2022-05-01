@@ -2,7 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Platforms>AnyCPU</Platforms>
     <UserSecretsId>96f99293-1dce-4c14-af71-1bc94f10ee97</UserSecretsId>
+    <Configurations>Debug</Configurations>
   </PropertyGroup>
 
   <ItemGroup>

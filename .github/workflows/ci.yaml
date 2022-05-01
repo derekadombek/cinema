@@ -27,3 +27,15 @@ jobs:
         run: |
           dotnet restore ./CinemaApi/
           dotnet build ./CinemaApi/
+
+      - name: Configure AWS credentials from Production account
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: arn:aws:iam::722647055695:user/derek
+          aws-region: us-east-1
+
+      - name: Container
+        run: |
+          aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 722647055695.dkr.ecr.us-east-1.amazonaws.com
+          docker build -f ./deployment/docker/CinemaApi/Dockerfile -t 722647055695.dkr.ecr.us-east-1.amazonaws.com/cinema-repo .
+          docker push 722647055695.dkr.ecr.us-east-1.amazonaws.com/cinema-repo
