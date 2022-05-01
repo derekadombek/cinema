@@ -31,7 +31,7 @@ jobs:
       - name: Configure AWS credentials from Production account
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: arn:aws:iam::722647055695:user/derek
+          role-to-assume: arn:aws:iam::722647055695:role/derek
           aws-region: us-east-1
 
       - name: Container
